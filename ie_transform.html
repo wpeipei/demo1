@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+    <meta charset="UTF-8">
+    <title>测试IE对transform的rotate属性的支持度</title>
+    <style>
+        .d1{
+            width:300px;
+            height:300px;
+            background:red;
+
+            transform:rotate(45deg);
+            /*filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1)*/
+            /*用滤镜旋转45deg角*/
+        -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865474, M12=-0.7071067811865477, M21=0.7071067811865477, M22=0.7071067811865474, SizingMethod='auto expand')";
+            /*测试transition属性*/
+            position: absolute;
+            top:0;
+            left:0;
+             -ms-transition:all 0.3s;
+            transition:all 0.3s;
+        }
+        .d1:hover{
+            left:500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="d1">123</div>
+</body>
+</html>

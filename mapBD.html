@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+    <meta charset="UTF-8">
+    <title>百度地图开发使用</title>
+    <style>
+        #allmap{
+            width:800px;
+            height:800px;
+            margin:0 auto;
+        }
+    </style>
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=hB1lmkau9Fn9nLSwrbeht2TuPZva66iV"></script>
+</head>
+<body>
+    <h1>百度地图调用</h1>
+    <div id="allmap">
+
+    </div>
+</body>
+
+<script>
+    //百度地图API
+//    创建map实例
+    var map=new BMap.Map("allmap");
+//    初始化地图，设置中心坐标和地图级别
+    map.centerAndZoom(new BMap.Point(116.404,39.915),11);
+//    添加地图类型控件(地图，3D，卫星)
+    map.addControl(new BMap.MapTypeControl());
+//    设置地图显示的城市，此项是必须设置的
+    map.setCurrentCity("北京");
+//    开启鼠标滚轮缩放
+    map.enableScrollWheelZoom(true);
+
+
+
+</script>
+</html>

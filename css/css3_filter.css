@@ -1,0 +1,24 @@
+.container{
+    width:80%;
+    margin:0 auto;
+    padding:50px 0;
+    background:#ddd;
+}
+
+/*设置灰度滤镜*/
+.grayScale img{
+    filter:grayscale(0);
+    /*-ms-filter: grayscale(0);*/
+}
+.grayScale img:hover{
+    filter:grayscale(1);
+    /*-ms-filter: grayscale(1);*/
+}
+
+/*设置老照片滤镜*/
+.sepia img{
+    filter:sepia(0);
+}
+.sepia img:hover{
+    filter:sepia(1);
+}

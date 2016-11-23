@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+    <meta charset="UTF-8">
+    <title>边角翻折</title>
+    <style>
+        .container{
+            width: 80%;
+            margin:0 auto;
+            padding: 50px 0;
+        }
+        .paper{
+            width:400px;
+            height: 700px;
+            background:lightyellow;
+            margin:0 auto;
+            position:relative;
+            z-index:-2;
+        }
+        .paper_top_right{
+            position:absolute;
+            top:0;
+            left:0;
+            border:50px solid lightyellow;
+            border-top-color: #fff;
+            border-left-color: #fff;
+        }
+        /*通过一个伪类，设置边框阴影，模仿成卷边的阴影效果*/
+        .paper_top_right:after{
+            content:"";
+            width:100px;
+            height:100px;
+            position:absolute;
+            top:-47px;
+            left:-48px;
+            box-shadow: 2px 1px 4px 2px rgba(0,0,0,0.3);
+            z-index:-20;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="paper">
+            <div class="paper_top_right">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

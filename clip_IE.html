@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+    <meta charset="UTF-8">
+    <title>clip在ie中的应用</title>
+    <style>
+        .container{
+            width:200px;
+            height:200px;
+            background:yellow;
+            position:relative;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            behavior: url(data/PIE.htc);
+            overflow: hidden;
+        }
+        .clip_left,.clip_right,.gray{
+            width:200px;
+            height:200px;
+            position:absolute;
+            left:0;
+            top:0;
+        }
+        .gray{
+             background:gray;
+         }
+        .clip_left{
+            background:red;
+            transform:rotate(345deg);
+            clip:rect(0px,100px,200px,0px);
+        }
+        .clip_right{
+            background:red;
+            clip:rect(0px,200px,200px,100px);
+        }
+        .content{
+            width:160px;
+            height:160px;
+            position:absolute;
+            left:20px;
+            top:20px;
+            background:#000;
+            border-radius: 50%;
+            behavior: url(data/PIE.htc);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!--<div class="gray"></div>-->
+        <div class="clip_left"></div>
+        <!--<div class="clip_right"></div>-->
+        <div class="content"></div>
+    </div>
+
+    <!--<div style="width:100px;height:100px;background:red;transform:rotate(45deg);behavior: url(data/PIE.htc)">-->
+
+    <!--</div>-->
+
+    <!--<script src="js/jquery-3.1.1.min.js"></script>-->
+    <script src="js/jquery.rotate.min.js"></script>
+    <script>
+        $('.clip_left').rotate(45);
+    </script>
+</body>
+</html>

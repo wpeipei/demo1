@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+    <meta charset="UTF-8">
+    <title>类名控制css3过渡</title>
+    <style>
+        .container{
+            width:80%;
+            margin:0 auto;
+            padding:50px 0;
+            background:#eee;
+            height:800px;
+        }
+        .containerItem{
+            width:400px;
+            height:400px;
+            position:relative;
+            margin:0 auto;
+            /*将容器覆盖在content上，保证每次鼠标进入时都能触发其绑定时间*/
+            z-index:1;
+        }
+        .yellow,.pink{
+            margin:0 auto;
+            transition:all 0.4s;
+            position:absolute;
+            left:200px;
+            top:200px;
+            transform:translate(-50%,-50%);
+            border-radius:50%;
+        }
+        .yellow{
+            width:400px;
+            height:400px;
+            background:yellow;
+        }
+        .yellow_hover{
+            width:200px;
+            height:200px;
+        }
+        .pink{
+            width:200px;
+            height:200px;
+            background:pink;
+        }
+        .pink_hover{
+            width:400px;
+            height:400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="containerItem">
+            <div class="pink"></div>
+            <div class="yellow"></div>
+        </div>
+
+    </div>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script>
+        $('.containerItem').on('mouseover',function(){
+            console.log("鼠标进入了");
+            $('.yellow').addClass('yellow_hover');
+            $('.pink').addClass('pink_hover');
+        })
+        $('.containerItem').on('mouseout',function(){
+            console.log("鼠标移出了");
+            $('.yellow').removeClass('yellow_hover');
+            $('.pink').removeClass('pink_hover');
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

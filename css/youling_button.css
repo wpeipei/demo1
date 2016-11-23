@@ -1,0 +1,39 @@
+body{
+    background:#000;
+}
+.container{
+    width:80%;
+    height:800px;
+    margin:0 auto;
+    /*background:lightyellow;*/
+    padding:100px 0;
+}
+.box{
+    width:200px;
+    height:50px;
+    margin:0 auto;
+    position:relative;
+    /*background:#fff;*/
+}
+.box button{
+    outline:none;
+    padding:15px 25px;
+    font-weight:bold;
+    font-size:18px;
+    color:blue;
+    background:#000;
+    border:2px solid #fff;
+    font-family:"微软雅黑";
+}
+.line{
+    display:block;
+    width:2px;
+    border-bottom: 2px solid #fff;
+    position:absolute;
+    top:-100%;
+    right:0;
+    transition:all 0.4s;
+}
+.box:hover .line{
+    top:0;
+}

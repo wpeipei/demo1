@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+    <meta charset="UTF-8">
+    <title>去除inline元素之间的空隙的方法（考虑到兼容性的方法）</title>
+    <style>
+        .d1{
+            /*能解决到ie8+，ie7不支持*/
+            font-size:0;
+        }
+        /*可以兼容到ie6,ie7的方法,好方法，太棒啦！*/
+        .d2{
+            letter-spacing: -9px;
+        }
+    </style>
+</head>
+<body>
+    <h1>去除inline元素之间的空隙的方法（考虑到兼容性的方法）</h1>
+    <h2>能解决到ie8+，ie7不支持 （font-size:0;）</h2>
+    <div class="d1">
+        <img src="images/1.jpg" alt=""/>
+        <img src="images/2.jpg" alt=""/>
+        <img src="images/1.jpg" alt=""/>
+        <img src="images/2.jpg" alt=""/>
+    </div>
+
+<!--可以兼容到ie7的方法-->
+    <h2>可以兼容到ie6,ie7的方法,好方法，太棒啦！(letter-spacing:-10px;)</h2>
+    <div class="d2">
+        <img src="images/1.jpg"/>
+        <img src="images/2.jpg"/>
+        <img src="images/1.jpg"/>
+        <img src="images/2.jpg"/>
+    </div>
+</body>
+</html>

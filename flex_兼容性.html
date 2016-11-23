@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+    <meta charset="UTF-8">
+    <title>flex兼容性--不支持IE</title>
+    <style>
+        /*.flex_container{*/
+            /*display: flex;*/
+
+        /*}*/
+        /*.flex_container div.item{*/
+            /*width:300px;*/
+            /*height:300px;*/
+            /*border:2px solid red;*/
+        /*}*/
+        /*.flex_container :nth-child(1){*/
+            /*background:deepskyblue;*/
+            /*flex:1;*/
+        /*}*/
+        /*.flex_container :nth-child(2){*/
+            /*background:orangered;*/
+            /*flex: 2;*/
+        /*}*/
+        /*.flex_container :nth-child(3){*/
+            /*background:yellow;*/
+            /*flex:1;*/
+        /*}*/
+        /*测试ie专用*/
+        .containerIE{
+            display:flex;
+        }
+        .containerIE div{
+            width:200px;
+            height:200px;
+            border:2px  solid red;
+        }
+    </style>
+</head>
+<body>
+    <!--<div class="flex_container">-->
+        <!--<div class="item">1</div>-->
+        <!--<div class="item">2</div>-->
+        <!--<div class="item">3</div>-->
+    <!--</div>-->
+    <h1>IE不支持</h1>
+    <div class="containerIE">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>

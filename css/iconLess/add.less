@@ -1,0 +1,28 @@
+@size:20px;
+@color:#000;
+.add{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position:relative;
+  font-size: @size;
+  display:inline-block;
+  width:@size;
+  height:@size;
+}
+.add:before,.add:after{
+  content:'';
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  box-shadow:inset 0 0 0 1em;
+}
+.add:before{
+  width:1em;
+  height:2px;
+}
+.add:after{
+  height:1em;
+  width:2px;
+}

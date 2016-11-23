@@ -1,0 +1,77 @@
+.add {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  font-size: 20px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+.add:before,
+.add:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset 0 0 0 1em;
+}
+.add:before {
+  width: 1em;
+  height: 2px;
+}
+.add:after {
+  height: 1em;
+  width: 2px;
+}
+.add-circle {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  font-size: 20px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  padding: 15px;
+}
+.add-circle:before,
+.add-circle:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset 0 0 0 1em;
+}
+.add-circle:before {
+  width: 1em;
+  height: 2px;
+}
+.add-circle:after {
+  height: 1em;
+  width: 2px;
+}
+.icon-img {
+  display: inline-block;
+}
+.rightArrow {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  font-size: 15px;
+  text-align: right;
+  padding: 5px 0;
+}
+.rightArrow:before {
+  content: '';
+  box-shadow: inset 0 0 0 1em;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  transform: translateX(50%) rotate(-45deg);
+}
